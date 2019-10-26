@@ -17,10 +17,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    @IBAction func findButton(_ sender: UIButton) {
+        navigationStyle()
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
+    func navigationStyle(){
+        let app = UINavigationBarAppearance()
+        app.backgroundColor = UIColor.brown.withAlphaComponent(0.7)
+        
+        self.navigationController?.navigationBar.scrollEdgeAppearance = app
+    }
+    
+    @IBAction func findButton(_ sender: Any) {
+    } //calculation
+    
+    
 }
 
