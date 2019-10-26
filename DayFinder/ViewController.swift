@@ -37,19 +37,26 @@ class ViewController: UIViewController {
     
     @IBAction func findButton(_ sender: Any) {
         let calendar = Calendar.current
-        
         var dateComponents = DateComponents()
-        dateComponents.day = Int(dayTextField.text!)
-        dateComponents.month = Int(monthTextField.text!)
-        dateComponents.year = Int(yearTextField.text!)
         
-        let date = calendar.date(from: dateComponents)
+        guard let day = dayTextField.text, let month = monthTextField.text, let year = yearTextField.text else {return}
+        dateComponents.day = Int(day)
+        dateComponents.month = Int(month)
+        dateComponents.year = Int(year)
+        
+        
+        //        dateComponents.day = Int(dayTextField.text!)
+        //        dateComponents.month = Int(monthTextField.text!)
+        //        dateComponents.year = Int(yearTextField.text!)
+        
+        //        let date = calendar.date(from: dateComponents)
+        guard let date = calendar.date(from: dateComponents) else {return}
         
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "lv_LV")
         dateFormatter.dateFormat = "EEEE"
         
-        let weekday = dateFormatter.string(from: date!)
+        let weekday = dateFormatter.string(from: date)
         let capitalizedWeekday = weekday.capitalized
         resultLabel.text = capitalizedWeekday
     } //calculation
