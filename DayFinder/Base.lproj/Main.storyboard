@@ -72,6 +72,9 @@
                                 <rect key="frame" x="122" y="686" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Find "/>
+                                <connections>
+                                    <action selector="findButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eeq-6K-pdV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day of the Week inside Your Finder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Q4-tc-xGY">
                                 <rect key="frame" x="93" y="527" width="229" height="96"/>
@@ -84,6 +87,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dayTextField" destination="5TF-VD-i0U" id="qE0-iK-4r1"/>
+                        <outlet property="monthTextField" destination="xV5-nq-BtG" id="hDX-ER-cva"/>
+                        <outlet property="resultLabel" destination="0Q4-tc-xGY" id="N0x-m1-Yd0"/>
+                        <outlet property="yearTextField" destination="NeN-Jg-5FH" id="xbz-fs-HmV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
